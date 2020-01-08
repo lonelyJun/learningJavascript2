@@ -1,12 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import BookManger from "../views/BookManger";
 
 Vue.use(VueRouter)
+
+
 
 const routes = [
   {
     path: '/',
+    name: 'bookManager',
+    component: BookManger
+  },
+  {
+    path: '/home',
     name: 'home',
     component: Home
   },
@@ -19,9 +27,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
 ]
-
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })
