@@ -6,7 +6,7 @@ let bookList = []
 describe('测试BookDom', () => {
   before(() => {
     mongoose.connect(
-      'mongodb://localhost:27017/database',
+      'mongodb://39.98.70.116:27017/database',
       { useMongoClient: true },
       err => {
         if (!err) {
